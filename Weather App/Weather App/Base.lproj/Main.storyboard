@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Weather_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="lIF-5O-bwP">
+                                <rect key="frame" x="0.0" y="20" width="375" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="aCG-G8-WiQ"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="VWm-t9-l1d">
+                                <rect key="frame" x="0.0" y="76" width="375" height="429"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rdo-iR-KL7">
+                                <rect key="frame" x="0.0" y="505" width="375" height="162"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="162" id="ZND-E3-2d8"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="JCf-6O-HgS"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="zO1-JI-NGg"/>
+                                </connections>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="VWm-t9-l1d" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="4lg-Wd-rov"/>
+                            <constraint firstItem="Rdo-iR-KL7" firstAttribute="top" secondItem="VWm-t9-l1d" secondAttribute="bottom" id="9Ib-iz-tCS"/>
+                            <constraint firstItem="VWm-t9-l1d" firstAttribute="top" secondItem="lIF-5O-bwP" secondAttribute="bottom" id="Aou-Sa-beu"/>
+                            <constraint firstItem="lIF-5O-bwP" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="EJV-q6-ZwI"/>
+                            <constraint firstItem="Rdo-iR-KL7" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="J12-cs-8MZ"/>
+                            <constraint firstItem="Rdo-iR-KL7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="KuY-hT-zwT"/>
+                            <constraint firstItem="lIF-5O-bwP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="WwW-My-6Mi"/>
+                            <constraint firstItem="Rdo-iR-KL7" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="afu-WH-e5X"/>
+                            <constraint firstItem="lIF-5O-bwP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="gSU-2j-LYv"/>
+                            <constraint firstItem="VWm-t9-l1d" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="wNf-Fc-aKk"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="pickerView" destination="Rdo-iR-KL7" id="fRb-1c-oWO"/>
+                        <outlet property="searchBar" destination="lIF-5O-bwP" id="BG4-JI-rK5"/>
+                        <outlet property="tableView" destination="VWm-t9-l1d" id="EBG-PK-aZT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+</document>
